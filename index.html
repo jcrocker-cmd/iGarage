@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iGarage</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="mediaquery.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  <audio src="/assets/sounds/bg-music.mp3" autoplay></audio>
+  <!-- <iframe src="assets/sounds/bg-music.mp3" allow="autoplay" style="display:none" id="iframeAudio"> -->
+  </iframe> 
+
+  <section id="main-menu-sec">
+      <div class="main-menu-con">
+          <img src="/assets/Game-logo.png" alt="" srcset="" class="game_title">
+      
+
+      <div class="buttons">
+          <a href="categories.html" class="game-button orange">
+              <span><i class="far fa-play"></i></span>
+              <span>PLAY</span>
+          </a>
+
+          <a href="#" class="game-button red" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <span><i class="far fa-pencil"></i></span>
+              <span>ABOUT</span>
+          </a>
+      </div>
+      </div>
+  </section>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    <script src="index.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
