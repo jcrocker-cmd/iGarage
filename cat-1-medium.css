@@ -182,12 +182,12 @@ body {
   transition: opacity 0.5s;
 }
 .draggable {
-  height: 10rem;
-  width: 10rem;
+  height: 96px;
+  width: 96px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
+  /* font-size: 4rem; */
   font-weight: bold;
   margin: 0rem 0.5rem;
   /* gap: 20px; */
@@ -244,7 +244,13 @@ body {
 }
 
 @media (max-width: 600px) {
-  html { font-size: 14px; }
+  html { font-size: 10px; }
   #play-again-btn { top: -0.4rem; }
   #play-again-btn.play-again-btn-entrance { transform: translateX(7rem); }
+
+  .draggable
+  {
+    height: 70px;
+    width: 70px;
+  }
 }

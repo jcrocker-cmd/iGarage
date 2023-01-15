@@ -1,7 +1,44 @@
-@media(max-width: 1052px)
+@media(max-width:960px)
 {
-    .main-menu-sec .game_title
+    #main-menu-sec .game_title
     {
-        width: 400px;
+        width: 600px;
+        /* display: none; */
+    }
+
+    .buttons a
+    {
+        font-size: 20px;
     }
 }
+
+@media(max-width:400px)
+{
+    #main-menu-sec .game_title
+    {
+        width: 320px;
+        /* display: none; */
+    }
+
+    .buttons a
+    {
+        font-size: 18px;
+    }
+    .buttons a
+    {
+        font-size: 15px;
+    }
+    .game-button
+    {
+        padding: 5px 15px;
+    }
+    body
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+

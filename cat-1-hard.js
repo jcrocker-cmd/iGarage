@@ -97,7 +97,7 @@ const brands = [
     // Create "draggable-items" and append to DOM
     for(let i=0; i<randomDraggableBrands.length; i++) {
       draggableItems.insertAdjacentHTML("beforeend", `
-        <img src="/assets/vehicle/hard/${randomDraggableBrands[i].iconName}" class="draggable" draggable="true" style="color: ${randomDraggableBrands[i].color}; height: 96px; width: 96px;" id="${randomDraggableBrands[i].iconName}">
+        <img src="/assets/vehicle/hard/${randomDraggableBrands[i].iconName}" class="draggable" draggable="true" style="color: ${randomDraggableBrands[i].color};" id="${randomDraggableBrands[i].iconName}">
       `);
     }
     
