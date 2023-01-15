@@ -106,7 +106,7 @@ const brands = [
     // Create "draggable-items" and append to DOM
     for(let i=0; i<randomDraggableBrands.length; i++) {
       draggableItems.insertAdjacentHTML("beforeend", `
-        <img src="/assets/vehicle/medium/${randomDraggableBrands[i].iconName}" class="draggable" draggable="true" style="color: ${randomDraggableBrands[i].color};" id="${randomDraggableBrands[i].iconName}">
+        <img src="/assets/vehicle/medium/${randomDraggableBrands[i].iconName}" class="draggable" draggable="true" style="color: ${randomDraggableBrands[i].color}; height: ${randomDraggableBrands[i].height}; width: ${randomDraggableBrands[i].width};" id="${randomDraggableBrands[i].iconName}">
       `);
     }
     
@@ -172,15 +172,35 @@ const brands = [
     const droppableElementBrand = event.target.getAttribute("data-brand");
     const isCorrectMatching = draggableElementBrand===droppableElementBrand;
     total++;
+    // if(isCorrectMatching) {
+    //   const draggableElement = document.getElementById(draggableElementBrand);
+    //   event.target.classList.add("dropped");
+    //   draggableElement.classList.add("dragged");
+    //   draggableElement.setAttribute("draggable", "false");
+    //   // event.target.innerHTML = `<i class="fas fa-${draggableElementBrand}" style="color: ${draggableElement.style.color};"></i>`;
+    //   event.target.innerHTML = `<img src="/assets/vehicle/medium/${draggableElementBrand}" style="color: ${draggableElement.style.color}; height: 50px; width: 50px;">`;
+    //   correct++;  
+    // }
+
     if(isCorrectMatching) {
       const draggableElement = document.getElementById(draggableElementBrand);
       event.target.classList.add("dropped");
       draggableElement.classList.add("dragged");
       draggableElement.setAttribute("draggable", "false");
-      // event.target.innerHTML = `<i class="fas fa-${draggableElementBrand}" style="color: ${draggableElement.style.color};"></i>`;
-      event.target.innerHTML = `<img src="/assets/vehicle/medium/${draggableElementBrand}" style="color: ${draggableElement.style.color}; height: ${draggableElement.style.height}; width: ${draggableElement.style.width};">`;
+      let imgElement = document.createElement("img");
+      imgElement.src = "/assets/vehicle/medium/" + draggableElementBrand;
+      imgElement.style.color = draggableElement.style.color;
+      if (window.matchMedia("(max-width: 600px)").matches) {
+        imgElement.style.height = "50px";
+        imgElement.style.width = "50px";
+      } else {
+        imgElement.style.height = "90px";
+        imgElement.style.width = "90px";
+      }
+      event.target.appendChild(imgElement);
       correct++;  
     }
+
     scoreSection.style.opacity = 0;
     setTimeout(() => {
       correctSpan.textContent = correct;
