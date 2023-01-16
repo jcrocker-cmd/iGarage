@@ -5,6 +5,14 @@
     padding: 0;
     margin: 0;
 }
+.modal-title
+{
+  font-family: 'Carter One', sans-serif;
+}
+#simpleUsage
+{
+  font-family: 'Poppins', sans-serif;
+}
 #main-menu-sec
 {
     height: 100vh;
@@ -13,8 +21,6 @@
     background-repeat: no-repeat;
     /* background-size: 100%; */
     background-position: center;
-
-   
 }
 
 #bg-video {
