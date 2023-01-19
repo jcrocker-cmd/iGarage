@@ -194,8 +194,8 @@ const brands = [
         imgElement.style.height = "50px";
         imgElement.style.width = "50px";
       } else {
-        imgElement.style.height = "90px";
-        imgElement.style.width = "90px";
+        imgElement.style.height = "70px";
+        imgElement.style.width = "70px";
       }
       event.target.appendChild(imgElement);
       correct++;  

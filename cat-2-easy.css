@@ -7,7 +7,7 @@
 }
 html
 {
-  font-size: 15px;
+  font-size: 11px;
 }
 #main-menu-sec
 {
@@ -179,8 +179,8 @@ body {
   transition: opacity 0.5s;
 }
 .draggable {
-  height: 5rem;
-  width: 5rem;
+  height: 80px;
+  width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;

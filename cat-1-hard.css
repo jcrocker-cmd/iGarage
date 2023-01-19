@@ -5,6 +5,11 @@
     padding: 0;
     margin: 0;
 }
+
+html
+{
+  font-size: 13px;
+}
 #main-menu-sec
 {
     height: 100vh;
@@ -13,8 +18,6 @@
     background-repeat: no-repeat;
     /* background-size: 100%; */
     background-position: center;
-
-   
 }
 .main-menu-con
 {
@@ -182,8 +185,8 @@ body {
   transition: opacity 0.5s;
 }
 .draggable {
-  height: 96px;
-  width: 96px;
+  height: 80px;
+  width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
