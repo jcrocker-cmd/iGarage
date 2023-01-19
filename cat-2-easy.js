@@ -176,15 +176,35 @@ const brands = [
     const droppableElementBrand = event.target.getAttribute("data-brand");
     const isCorrectMatching = draggableElementBrand===droppableElementBrand;
     total++;
+    // if(isCorrectMatching) {
+    //   const draggableElement = document.getElementById(draggableElementBrand);
+    //   event.target.classList.add("dropped");
+    //   draggableElement.classList.add("dragged");
+    //   draggableElement.setAttribute("draggable", "false");
+    //   // event.target.innerHTML = `<i class="fas fa-${draggableElementBrand}" style="color: ${draggableElement.style.color};"></i>`;
+    //   event.target.innerHTML = `<img src="/assets/brandlogo/easy/${draggableElementBrand}" style="color: ${draggableElement.style.color}; height: ${draggableElement.style.height}; width: ${draggableElement.style.width};">`;
+    //   correct++;  
+    // }
+
     if(isCorrectMatching) {
       const draggableElement = document.getElementById(draggableElementBrand);
       event.target.classList.add("dropped");
       draggableElement.classList.add("dragged");
       draggableElement.setAttribute("draggable", "false");
-      // event.target.innerHTML = `<i class="fas fa-${draggableElementBrand}" style="color: ${draggableElement.style.color};"></i>`;
-      event.target.innerHTML = `<img src="/assets/brandlogo/easy/${draggableElementBrand}" style="color: ${draggableElement.style.color}; height: ${draggableElement.style.height}; width: ${draggableElement.style.width};">`;
+      let imgElement = document.createElement("img");
+      imgElement.src = "/assets/brandlogo/easy/" + draggableElementBrand;
+      imgElement.style.color = draggableElement.style.color;
+      if (window.matchMedia("(max-width: 600px)").matches) {
+        imgElement.style.height = "30px";
+        imgElement.style.width = "30px";
+      } else {
+        imgElement.style.height = "50px";
+        imgElement.style.width = "50px";
+      }
+      event.target.appendChild(imgElement);
       correct++;  
     }
+    
     scoreSection.style.opacity = 0;
     setTimeout(() => {
       correctSpan.textContent = correct;
