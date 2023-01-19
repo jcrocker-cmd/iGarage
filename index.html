@@ -12,6 +12,7 @@
 </head>
 <body>
   <audio src="/assets/sounds/bg-music.mp3" autoplay></audio>
+  <audio id="music" src="/assets/sounds/DM-CGS-26.mp3"></audio>
   <!-- <iframe src="assets/sounds/bg-music.mp3" allow="autoplay" style="display:none" id="iframeAudio"> -->
   <!-- </iframe>  -->
 
@@ -28,7 +29,7 @@
       
 
       <div class="buttons">
-          <a href="categories.html" class="game-button orange">
+          <a href="categories.html" id="buttonId" class="game-button orange">
               <span><i class="far fa-play"></i></span>
               <span>PLAY</span>
           </a>
@@ -66,6 +67,7 @@
   <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <script src="type.js"></script>
     <script src="index.js"></script>
+    <script src="button-click.js"></script>
     <script src="/assets/bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
