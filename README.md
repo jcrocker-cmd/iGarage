@@ -1,2 +1,2 @@
 # iGarage
-Game Development Project.
+Game Development Project for Game Development project.
