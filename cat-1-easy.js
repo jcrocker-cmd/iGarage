@@ -104,16 +104,6 @@ const brands = [
       brandName: "Ship",
       color: "#ba0c2f" 
   },
-  {
-      iconName: "shopping-cart",
-      brandName: "Shopping Cart",
-      color: "#ba0c2f" 
-  },
-  {
-      iconName: "wheelchair",
-      brandName: "Wheel Chair",
-      color: "#ba0c2f" 
-  },
 ];
 let correct = 0;
 let total = 0;
